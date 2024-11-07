@@ -1,0 +1,62 @@
+lib/
+├── core/
+│   ├── constants/
+│   │   └── api_constants.dart
+│   ├── errors/
+│   │   ├── failures.dart
+│   │   └── exceptions.dart
+│   ├── network/
+│   │   └── network_info.dart
+│   └── utils/
+│       └── shared_preferences_helper.dart
+├── data/
+│   ├── datasources/
+│   │   ├── local/
+│   │   │   └── auth_local_datasource.dart
+│   │   └── remote/
+│   │       └── auth_remote_datasource.dart
+│   ├── models/
+│   │   ├── user_model.dart
+│   │   ├── pasar_model.dart
+│   │   ├── pedagang_model.dart
+│   │   └── retribusi_model.dart
+│   └── repositories/
+│       └── auth_repository_impl.dart
+├── domain/
+│   ├── entities/
+│   │   ├── user.dart
+│   │   ├── pasar.dart
+│   │   ├── pedagang.dart
+│   │   └── retribusi.dart
+│   ├── repositories/
+│   │   └── auth_repository.dart
+│   └── usecases/
+│       └── auth/
+│           ├── login_usecase.dart
+│           └── get_current_user_usecase.dart
+├── presentation/
+│   ├── bloc/
+│   │   └── auth/
+│   │       ├── auth_bloc.dart
+│   │       ├── auth_event.dart
+│   │       └── auth_state.dart
+│   ├── pages/
+│   │   ├── login_page.dart
+│   │   └── splash_page.dart
+│   └── widgets/
+└── main.dart
+
+my app for role kolektor base on my repo, so it can access by kolektor role only. key features:
+
+Authentication (Login)
+Dashboard
+Pasar (Market) List
+Pedagang (Merchant) List
+Retribusi (Fee Collection)
+
+phase 2
+Start with the Authentication feature, as it's the entry point of your app.
+Implement the Dashboard, which will likely be the main screen after login.
+Add the Pasar List feature.
+Implement the Pedagang List, which may be associated with specific Pasar.
+Finally, add the Retribusi (Fee Collection) feature, which will likely involve both Pasar and Pedagang data.
